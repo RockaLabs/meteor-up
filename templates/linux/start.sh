@@ -19,7 +19,7 @@ set +e
 set -e
 docker build -t abernix/meteord:app - << EOF
 FROM abernix/meteord:base
-# RUN apt-get install graphicsmagick -y
+RUN apt-get update -y && apt-get install graphicsmagick -y
 EOF
 
 
